@@ -1,0 +1,21 @@
+diff -Naur /usr/share/lipstick-jolla-home-qt5/volumecontrol/Screenshot.orig /usr/share/lipstick-jolla-home-qt5/volumecontrol/Screenshot.qml
+--- /usr/share/lipstick-jolla-home-qt5/volumecontrol/Screenshot.qml
++++ /usr/share/lipstick-jolla-home-qt5/volumecontrol/Screenshot.qml
+@@ -46,7 +46,7 @@
+         var result = Lipstick.takeScreenshot(filePath)
+         immediateNotification.replacesId = 0
+         immediateNotification.body = filename
+-        immediateNotification.publish()
++        //immediateNotification.publish()
+ 
+         var replacesId = immediateNotification.replacesId
+         if (result) {
+@@ -54,7 +54,7 @@
+                 completeNotification.replacesId = replacesId
+                 completeNotification.body = filename
+                 completeNotification.icon = filePath
+-                completeNotification.publish()
++                //completeNotification.publish()
+             })
+         }
+     }
