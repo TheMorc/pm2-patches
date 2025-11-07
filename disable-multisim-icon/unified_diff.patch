@@ -1,0 +1,12 @@
+diff -Naur /usr/lib64/qt5/qml/Sailfish/Settings/Networking/MobileNetworkStatusIndicator.orig /usr/lib64/qt5/qml/Sailfish/Settings/Networking/MobileNetworkStatusIndicator.qml
+--- /usr/lib64/qt5/qml/Sailfish/Settings/Networking/MobileNetworkStatusIndicator.qml
++++ /usr/lib64/qt5/qml/Sailfish/Settings/Networking/MobileNetworkStatusIndicator.qml
+@@ -121,7 +121,7 @@
+                            ? "image://theme/icon-status-roaming-sim"
+                            : "image://theme/icon-status-cellular-sim")
+                 var simIndex = root.simManager.indexOfModem(root.modemPath)
+-                return maskBase + (simIndex + 1) + "-mask"
++                return maskBase + "-mask"
+             }
+             onSourceChanged: {
+                 // ShaderEffect must be coaxed into changing its image
