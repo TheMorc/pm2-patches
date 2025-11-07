@@ -1,0 +1,31 @@
+diff -Naur /usr/share/lipstick-jolla-home-qt5/statusarea/CellularNetworkTypeStatusIndicator.orig /usr/share/lipstick-jolla-home-qt5/statusarea/CellularNetworkTypeStatusIndicator.qml
+--- /usr/share/lipstick-jolla-home-qt5/statusarea/CellularNetworkTypeStatusIndicator.qml
++++ /usr/share/lipstick-jolla-home-qt5/statusarea/CellularNetworkTypeStatusIndicator.qml
+@@ -51,7 +51,7 @@
+         horizontalAlignment: Text.AlignRight
+         color: Theme.primaryColor
+         text: {
+-            var techToG = {gsm: "2", edge: "2.5", umts: "3", hspa: "3.5", lte: "4", nr: "5"}
++            var techToG = {gsm: "2G", edge: "2.5G", umts: "3G", hspa: "3.5G", lte: "LTE", nr: "5G"}
+             var onlineIds = {registered: true, roaming: true}
+ 
+             return (fakeOperator === ""
+@@ -60,18 +60,5 @@
+                        : "")
+                     : "3.5")
+         }
+-    }
+-
+-    Text {
+-        anchors {
+-            baseline: cellularNetworkTypeStatusIndicatorText.baseline
+-        }
+-        font {
+-            family: Theme.fontFamily
+-            pixelSize: Theme.fontSizeSmall
+-        }
+-        horizontalAlignment: Text.AlignRight
+-        color: cellularNetworkTypeStatusIndicatorText.color
+-        text: cellularNetworkTypeStatusIndicatorText.text.length > 0 ? "G" : ""
+     }
+ }
