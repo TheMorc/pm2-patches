@@ -1,0 +1,21 @@
+diff -Naur /usr/share/voicecall-ui-jolla/main.orig /usr/share/voicecall-ui-jolla/main.qml
+--- /usr/share/voicecall-ui-jolla/main.qml
++++ /usr/share/voicecall-ui-jolla/main.qml
+@@ -464,17 +464,7 @@
+ 
+     Connections {
+         target: VoiceCall.VoiceCallAudioRecorder
+-
+-        onCallRecorded: {
+-            var n = recordingNotification.createObject()
+-
+-            //% "Call recorded"
+-            n.summary = qsTrId("voicecall-la-call_recorded")
+-            n.body = label
+ 
+-            n.publish()
+-        }
+-
+         onRecordingError: {
+             var n = recordingNotification.createObject()
+ 
